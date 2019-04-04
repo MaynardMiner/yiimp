@@ -6,6 +6,7 @@ function yaamp_get_algos()
 	return array(
 		'sha256',
 		'sha256t',
+		'sha256q',
 		'scrypt',
 		'scryptn',
 		'allium',
@@ -17,8 +18,10 @@ function yaamp_get_algos()
 		'blake',
 		'blakecoin',
 		'blake2s',
+		'blake2b',
 		'decred',
 		'deep',
+		'exosis',
 		'hmq1725',
 		'keccak',
 		'keccakc',
@@ -30,7 +33,9 @@ function yaamp_get_algos()
 		'luffa',
 		'lyra2',
 		'lyra2v2',
+		'lyra2v3',
 		'lyra2z',
+		'lyra2zz',
 		'neoscrypt',
 		'nist5',
 		'penta',
@@ -82,9 +87,11 @@ function yaamp_algo_mBTC_factor($algo)
 	switch($algo) {
 	case 'sha256':
 	case 'sha256t':
+	case 'sha256q':
 	case 'blake':
 	case 'blakecoin':
 	case 'blake2s':
+	case 'blake2b':
 	case 'decred':
 	case 'keccak':
 	case 'keccakc':
@@ -141,6 +148,7 @@ function getAlgoColors($algo)
 	$a = array(
 		'sha256'	=> '#d0d0a0',
 		'sha256t'	=> '#d0d0f0',
+		'sha256q'	=> '#9696dd',
 		'scrypt'	=> '#c0c0e0',
 		'neoscrypt'	=> '#a0d0f0',
 		'scryptn'	=> '#d0d0d0',
@@ -165,6 +173,8 @@ function getAlgoColors($algo)
 		'bastion'	=> '#e0b0b0',
 		'blake'		=> '#f0f0f0',
 		'blakecoin'	=> '#f0f0f0',
+		'blake2b'	=> '#f2c81f',
+		'exosis'	=> '#49CCFE',
 		'groestl'	=> '#d0a0a0',
 		'jha'		=> '#a0d0c0',
 		'dmd-gr'	=> '#a0c0f0',
@@ -185,7 +195,9 @@ function getAlgoColors($algo)
 		'lbk3'		=> '#809aef',
 		'lyra2'		=> '#80a0f0',
 		'lyra2v2'	=> '#80c0f0',
+		'lyra2v3'       => '#80a0f0',
 		'lyra2z'	=> '#80b0f0',
+		'lyra2zz'	=> '#80b0f0',
 		'phi'		=> '#a0a0e0',
 		'phi2'		=> '#a0a0e0',
 		'polytimos'	=> '#dedefe',
@@ -221,10 +233,12 @@ function getAlgoPort($algo)
 	$a = array(
 		'sha256'	=> 3333,
 		'sha256t'	=> 3339,
+		'sha256q'	=> 3337,
 		'lbry'		=> 3334,
 		'scrypt'	=> 3433,
 		'timetravel'	=> 3555,
 		'bitcore'	=> 3556,
+		'exosis'	=> 3557,
 		'c11'		=> 3573,
 		'deep'		=> 3535,
 		'x11'		=> 3533,
@@ -249,9 +263,11 @@ function getAlgoPort($algo)
 		'scryptn'	=> 4333,
 		'allium'	=> 4443,
 		'lbk3'		=> 5522,
-		'lyra2'		=> 4433,
+		'lyra2'		=> 4432,
 		'lyra2v2'	=> 4533,
+		'lyra2v3'	=> 4433,
 		'lyra2z'	=> 4553,
+		'lyra2zz'	=> 4555,
 		'jha'		=> 4633,
 		'qubit'		=> 4733,
 		'zr5'		=> 4833,
@@ -271,6 +287,7 @@ function getAlgoPort($algo)
 		'decred'	=> 3252,
 		'vanilla'	=> 5755,
 		'blake2s'	=> 5766,
+		'blake2b'	=> 5777,
 		'penta'		=> 5833,
 		'rainforest'	=> 7443,
 		'luffa'		=> 5933,
