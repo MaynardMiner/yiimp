@@ -2,6 +2,7 @@
 #include "stratum.h"
 
 uint64_t lyra2z_height = 0;
+uint64_t cryptonightr_height;
 
 //#define MERKLE_DEBUGLOG
 //#define DONTSUBMIT
@@ -495,6 +496,9 @@ bool client_submit(YAAMP_CLIENT *client, json_value *json_params)
 
 	if (templ->height && !strcmp(g_current_algo->name,"lyra2z")) {
 		lyra2z_height = templ->height;
+	}
+		if (templ->height && !strcmp(g_current_algo->name,"cryptonightr")) {
+		cryptonightr_height = templ->height;
 	}
 
 	// minimum hash diff begins with 0000, for all...

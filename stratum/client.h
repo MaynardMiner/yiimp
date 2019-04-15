@@ -78,7 +78,7 @@ public:
 
 	char extranonce1_last[32];
 	int extranonce2size_last;
-
+	
 	char extranonce1_reconnect[32];
 	int extranonce2size_reconnect;
 

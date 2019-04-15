@@ -47,6 +47,8 @@ struct YAAMP_JOB_TEMPLATE
 	int height;
 	int target;
 
+	char blob;
+
 	json_int_t value;
 
 	char coinb1[4*1024];

@@ -19,6 +19,7 @@ screen -dmS debug tail -f $LOG_DIR/debug.log
 
 # Stratum instances (skipped/exit if no .conf)
 
+screen -dmS cryptonightr $STRATUM_DIR/run.sh cryptonightr
 screen -dmS c11 $STRATUM_DIR/run.sh c11
 screen -dmS deep $STRATUM_DIR/run.sh deep
 

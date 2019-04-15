@@ -108,8 +108,14 @@ static void neoscrypt_hash(const char* input, char* output, uint32_t len)
 	neoscrypt((unsigned char *)input, (unsigned char *)output, 0x80000620);
 }
 
+static void cryptonightr_hash(const char* input, char* output, uint32_t len)
+{
+ 	cryptonight(input, output, len, 4);
+}
+
 YAAMP_ALGO g_algos[] =
 {
+	{"cryptonightr", cryptonightr_hash, 1, 0, 0},
 	{"sha256", sha256_double_hash, 1, 0, 0},
 	{"scrypt", scrypt_hash, 0x10000, 0, 0},
 	{"scryptn", scryptn_hash, 0x10000, 0, 0},

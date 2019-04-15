@@ -176,6 +176,7 @@ void sha256_double_hash_hex(const char *input, char *output, unsigned int len);
 #include "algos/blakecoin.h"
 #include "algos/blake2b.h"
 #include "algos/blake2s.h"
+#include "algos/cryptonight.h"
 #include "algos/qubit.h"
 #include "algos/groestl.h"
 #include "algos/jha.h"
